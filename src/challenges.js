@@ -93,8 +93,20 @@ function decode(decPhrase) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, string) {
+  array = array.sort();
+  let objet = [];
+  if (array.length === 0) {
+    objet = 'Vazio!';
+  }
+
+  let itens = {};
+  for (let index = 0; index < array.length; index += 1) {
+    itens['name'] = string;
+    itens['tech'] = array[index];
+    objet.push(itens);
+  }
+  return objet;
 }
 
 module.exports = {
