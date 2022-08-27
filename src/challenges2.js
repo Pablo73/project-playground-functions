@@ -2,6 +2,7 @@
 function generatePhoneNumber(array) {
   let telefone = '(xx) xxxxx-xxxx';
   let conta = 0;
+  let contaTel = -1;
 
   if (array.length > 11 || array.length < 10) {
     return 'Array com tamanho incorreto.';
@@ -17,17 +18,17 @@ function generatePhoneNumber(array) {
         if (conta === 3) {
           return'não é possível gerar um número de telefone com esses valores';
         }
-        // for (let index3 = 0; index3 < telefone.length; index3 += 1) {
-        //   if(telefone[index3] === 'x') {
-        //     array[index] = telefone[index3];
-        //   }
-        // }
       }
       conta = 0;
     }
+  for (let index3 = 0; index3 < telefone.length; index3 += 1) {
+     if(telefone[index3] === 'x') {
+      contaTel = contaTel + 1,  telefone = telefone.replace(telefone[index3], array[contaTel]);}
+  }
 
-    //return telefone;
+    return telefone;
 }
+
 
 // Desafio 12
 function triangleCheck() {
