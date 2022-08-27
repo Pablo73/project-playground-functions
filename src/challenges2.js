@@ -44,8 +44,20 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(consumo) {
+  let reg = /\d+/g;// Referencia - YouTube - JavaScript Problem: Extracting Numbers from a String
+  let retorno = consumo.match(reg);// Referencia - YouTube - JavaScript Problem: Extracting Numbers from a String
+
+  let soma = 0;
+  for (let index = 0; index < retorno.length; index += 1) {
+    let number = parseInt(retorno[index]);
+    soma += number;
+  }
+  if (soma === 1) {
+    return retorno + ' copo de água'
+  }
+  return soma + ' copos de água';
+
 }
 
 module.exports = {
