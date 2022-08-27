@@ -99,9 +99,8 @@ function techList(array, string) {
   if (array.length === 0) {
     objet = 'Vazio!';
   }
-
-  let itens = {};
   for (let index = 0; index < array.length; index += 1) {
+    let itens = {};
     itens['name'] = string;
     itens['tech'] = array[index];
     objet.push(itens);
